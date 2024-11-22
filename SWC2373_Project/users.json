@@ -1,0 +1,32 @@
+{
+    "leahl1910@gmail.com": {
+        "title": "Ms",
+        "first_name": "Leah",
+        "last_name": "Leclerc",
+        "password": "password"
+    },
+    "landonorris@gmail.com": {
+        "title": "Mr",
+        "first_name": "Lando",
+        "last_name": "Norris",
+        "password": "password"
+    },
+    "georgerussell@gmail.com": {
+        "title": "Mr",
+        "first_name": "George ",
+        "last_name": "Russell",
+        "password": "password"
+    },
+    "alabono@gmail.com": {
+        "title": "Mr",
+        "first_name": "Alex",
+        "last_name": "Albon",
+        "password": "password"
+    },
+    "arissa2208@gmail.com": {
+        "title": "Ms",
+        "first_name": "Arissa",
+        "last_name": "Hanizan",
+        "password": "password"
+    }
+}

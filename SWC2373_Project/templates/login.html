@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="stylesheet" href="/static/form.css">
+    <link rel="stylesheet" href="/static/header.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div>
+                {% for category, message in messages %}
+                    <div class="{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-container">
+            <img id="logo" src="/static/uptm.png" alt="UPTM Logo">
+        </div>
+        <h1>Welcome to UPTM Meeting Portal</h1>
+    </header>
+
+    <!-- Login Form Container -->
+    <div class="form-container">
+        <h2>Login</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="show-password" onclick="togglePassword()">
+                <label for="show-password">Show Password</label>
+            </div>
+
+            <button type="submit" class="form-button">Login</button>
+        </form>
+
+        <p class="form-message">Don't have an account? <a href="{{ url_for('register') }}">Register here</a>.</p>
+    </div>
+
+    <!-- Password Toggle Script -->
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const showPasswordCheckbox = document.getElementById("show-password");
+            passwordField.type = showPasswordCheckbox.checked ? "text" : "password";
+        }
+    </script>
+</body>
+</html>

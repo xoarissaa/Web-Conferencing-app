@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Meeting</title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="stylesheet" href="/static/header.css">
+    <link rel="stylesheet" href="/static/schedule.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="/static/uptm.png" alt="UPTM Logo">
+        </div>
+        <h1>Welcome to UPTM Meeting Portal</h1>
+    </header>
+
+    <!-- Schedule Form Container -->
+    <div class="schedule-container">
+        <h1>Schedule a Meeting</h1>
+        
+        <!-- Success or Error Messages -->
+        {% if success %}
+            <div class="success">
+                <p>Meeting "{{ room_name }}" scheduled successfully!</p>
+                <p><a href="{{ url_for('meeting', room_id=room_id) }}">Click here to join the meeting</a></p>
+                <p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+            </div>
+        {% elif error %}
+            <div class="error">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
+
+        <!-- Form -->
+        <form action="{{ url_for('schedule') }}" method="POST">
+            <div class="form-group">
+                <label for="room_name">Room Name:</label>
+                <input type="text" id="room_name" name="room_name" placeholder="Enter meeting room name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            
+            <button type="submit" class="form-button">Schedule</button>
+        </form>
+
+        <!-- Back to Dashboard Link -->
+        <p class="form-message"><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>

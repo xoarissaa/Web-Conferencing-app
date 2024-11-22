@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Room</title>
+    <link rel="stylesheet" href="/static/meeting.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div id="logo-container">
+            <img src="/static/uptm.png" alt="UPTM Logo" id="logo">
+        </div>
+        <div id="welcome-container">
+            <h1 id="welcome-message">Welcome, {{ username }}!</h1>
+        </div>
+        <button id="leave-meeting-button" class="logout-button">Leave Meeting</button>
+    </header>
+
+    <!-- Main Content Section -->
+    <main id="meeting-container">
+        <!-- Participants Section -->
+        <div id="participants-section">
+            <h2>Participants</h2>
+            <ul id="participants-list">
+                {% for participant in participants %}
+                    <li>{{ participant }}</li>
+                {% endfor %}
+            </ul>
+        </div>        
+
+        <!-- Video and Screen Sharing Section -->
+        <section id="video-sharing-section">
+            <div id="video-container">
+                <video id="local-video" autoplay muted></video>
+                <video id="remote-video" autoplay></video>
+            </div>
+            <div id="sharing-screen">
+                <p>Sharing Screen Area</p>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <aside id="chat-section">
+            <h2>Chat</h2>
+            <div id="messages-container">
+                <ul id="messages">
+                    <!-- Chat messages go here -->
+                </ul>
+            </div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Type your message..." required />
+                <button type="submit" id="send-message-button">Send</button>
+            </form>
+        </aside>
+    </main>
+
+    <!-- Controls Section -->
+    <div id="controls">
+        <button id="camera-button">Turn on Camera</button>
+        <button id="mic-button">Turn on Mic</button>
+        <button id="share-screen-button">Share Screen</button>
+    </div>
+</body>
+</html>

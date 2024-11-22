@@ -1,0 +1,122 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container for the dashboard */
+.dashboard-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Logo Styling */
+#logo {
+    display: block;
+    margin: 0 auto 10px;
+    height: 100px;
+}
+
+/* Welcome Message */
+.dashboard-container h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
+/* Schedule Meeting Button */
+.schedule-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3b3a47;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 20px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.schedule-button:hover {
+    background-color: #565367;
+    transform: scale(1.05);
+}
+
+/* Scheduled Meetings Section */
+.meetings-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.meetings-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Meetings Table */
+.meetings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.meetings-table th,
+.meetings-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.meetings-table th {
+    background-color: #3b3a47;
+    color: white;
+    text-align: center;
+}
+
+.meetings-table td {
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.meetings-table tr:hover td {
+    background-color: #efefef;
+}
+
+/* Join Button */
+.join-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #0056b3;
+}

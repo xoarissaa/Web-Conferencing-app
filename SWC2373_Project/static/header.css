@@ -1,0 +1,32 @@
+/* Header Styling */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4c3f2c;
+    color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+#logo {
+    height: 80px;
+}
+
+#welcome-message {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logout-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}

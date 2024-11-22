@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Logo -->
+        <img id="logo" src="/static/uptm.png" alt="UPTM Logo">
+        
+        <!-- Welcome Message -->
+        <h1>Welcome, {{ username }}!</h1>
+
+        <!-- Logout Button -->
+        <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+
+        <!-- Schedule Meeting -->
+        <a href="{{ url_for('schedule') }}" class="schedule-button">Schedule Meeting</a>
+
+        <!-- Scheduled Meetings Section -->
+        <div class="meetings-section">
+            <h2>Scheduled Meetings</h2>
+            <table class="meetings-table">
+                <thead>
+                    <tr>
+                        <th>Meeting Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for meeting in meetings %}
+                    <tr>
+                        <td>{{ meeting.room_name }}</td>
+                        <td>
+                            <a href="{{ url_for('join_meeting', room_id=meeting.room_id) }}" class="join-button">Join</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

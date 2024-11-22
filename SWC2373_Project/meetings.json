@@ -1,0 +1,89 @@
+[
+    {
+        "room_id": "12345",
+        "room_name": "Team Meeting",
+        "date": "2024-11-22",
+        "time": "14:00",
+        "participants": [
+            {
+                "email": "john.doe@gmail.com",
+                "name": "John Doe"
+            },
+            {
+                "email": "jane.doe@gmail.com",
+                "name": "Jane Doe"
+            }
+        ]
+    },
+    {
+        "room_id": "67890",
+        "room_name": "Project Update",
+        "date": "2024-11-23",
+        "time": "10:00",
+        "participants": [
+            {
+                "email": "mark.smith@gmail.com",
+                "name": "Mark Smith"
+            },
+            {
+                "email": "susan.lee@gmail.com",
+                "name": "Susan Lee"
+            }
+        ]
+    },
+    {
+        "room_id": "30198c",
+        "room_name": "yapping",
+        "date": "2024-11-22",
+        "time": "11:22",
+        "participants": [
+            {
+                "email": "leahl1910@gmail.com",
+                "name": "Leah"
+            }
+        ]
+    },
+    {
+        "room_id": "4f1d45",
+        "room_name": "Las Vegas Gp",
+        "date": "2024-11-22",
+        "time": "17:20",
+        "participants": [
+            {
+                "email": "alabono@gmail.com",
+                "name": "Alex"
+            }
+        ]
+    },
+    {
+        "room_id": "8e3a17",
+        "room_name": "test",
+        "date": "2024-11-22",
+        "time": "18:21",
+        "participants": [
+            {
+                "email": "leahl1910@gmail.com",
+                "name": "Leah"
+            }
+        ]
+    },
+    {
+        "room_id": "db0f2412",
+        "room_name": "testing",
+        "date": "2024-11-22",
+        "time": "22:27",
+        "participants": [
+            "Arissa"
+        ]
+    },
+    {
+        "room_id": "3d9aa03c",
+        "room_name": "1001",
+        "date": "2024-11-22",
+        "time": "22:34",
+        "participants": [
+            "Arissa",
+            "George "
+        ]
+    }
+]
